@@ -14,11 +14,12 @@ To use the Data Encryption Standard (DES) algorithm for a practical application,
 ## Program:
 
 #include <stdio.h>
- #include <string.h>
- void encrypt(char *message, char *key, char *encryptedMessage, int
- messageLength) {
+#include <string.h>
+void encrypt(char *message, char *key, char *encryptedMessage, intmessageLength)
+{
  int keyLength = strlen(key);
- for (int i = 0; i < messageLength; i++) {
+ for (int i = 0; i < messageLength; i++) 
+ {
  // Encrypt by XORing message byte with key byte
  encryptedMessage[i] = message[i] ^ key[i % keyLength];
  }
@@ -75,5 +76,5 @@ To use the Data Encryption Standard (DES) algorithm for a practical application,
 ## Result:
 
 The program is executed successfully
-  The program is executed successfully
+
 
