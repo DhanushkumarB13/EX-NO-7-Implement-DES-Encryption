@@ -12,14 +12,14 @@ To use the Data Encryption Standard (DES) algorithm for a practical application,
 4. DES applies initial and final permutations along with 16 rounds of substitution and permutation transformations to produce ciphertext.
 
 ## Program:
-
+~~~
 #include <stdio.h>
-#include <string.h>
-void encrypt(char *message, char *key, char *encryptedMessage, intmessageLength)
-{
+ #include <string.h>
+ // Function to perform a simple XOR-based encryption
+ void encrypt(char *message, char *key, char *encryptedMessage, int
+ messageLength) {
  int keyLength = strlen(key);
- for (int i = 0; i < messageLength; i++) 
- {
+ for (int i = 0; i < messageLength; i++) {
  // Encrypt by XORing message byte with key byte
  encryptedMessage[i] = message[i] ^ key[i % keyLength];
  }
@@ -65,6 +65,7 @@ void encrypt(char *message, char *key, char *encryptedMessage, intmessageLength)
  printf("Decrypted Message: %s\n", decryptedMessage);
  return 0;
  }
+~~~
 
 
 ## Output:
